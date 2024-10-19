@@ -437,3 +437,104 @@ tr:nth-child(even) {
   .container-fluid {
     padding-top: 0rem;
   }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .modal.force-show {
+    display: block !important;
+  }
+
+  .modal-content {
+    background-color: #1a1a1a;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .modal-header {
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: white;
+  }
+
+  #loginButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+  }
+
+  #loginButton:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+  }
+
+  .spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translateY(-50%) rotate(0deg);
+    }
+
+    100% {
+      transform: translateY(-50%) rotate(360deg);
+    }
+  }
+
+  #loginButton.loading .spinner {
+    display: inline-block;
+  }
+
+  .alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+  }
