@@ -16,7 +16,7 @@ body {
   margin: 0px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
   overflow: auto;
-  height: 95vh;
+  height: 91vh;
 }
 
 .chat-btn {
@@ -212,7 +212,7 @@ footer {
 
 /* Ensure the chat content area takes full height of the screen */
 .chat-content-area {
-  height: calc(100vh - 135px);
+  height: calc(100vh - 199px);
   /* Adjusting for header/footer height */
   overflow-y: auto;
   /* Allow scrolling if content overflows */
