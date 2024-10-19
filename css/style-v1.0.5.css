@@ -104,7 +104,15 @@ input[type="range"]::-webkit-slider-thumb {
   outline: none;
   border: none;
   color: #ffffff;
-  resize: none;
+  /* resize: none; */
+}
+
+.system-prompt-inputs-container textarea {
+  background-color: #7b7b7b;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  /* resize: none; */
 }
 
 .chat-inputs-area-inner {
