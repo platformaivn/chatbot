@@ -34,7 +34,7 @@ function displayChatHistory() {
           <i class="fas fa-comment"></i> ${chat.name}
         </a>
         <a class="nav-link text-white" data-index="${index}" href="javascript:{}">
-          <i class="delete-chat fas fa-trash-alt"></i>
+          <i class="delete-chat fas fa-trash-alt" data-index="${index}"></i>
         </a>
       `;
         chatHistoryDiv.appendChild(chatItem);
