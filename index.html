@@ -15,37 +15,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/2.1.3/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
 </head>
-<style>
-  .welcome-logo {
-    width: 128px;
-    height: 128px;
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0% {
-      opacity: 0.6;
-    }
-
-    50% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0.6;
-    }
-  }
-
-  #welcome-screen {
-    display: flex;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .chat-content-area:not(:empty) #welcome-screen {
-    display: none;
-  }
-</style>
 
 <body>
   <!-- Header -->
@@ -281,7 +250,7 @@
   <!-- External JS resources -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/5.0.0-beta.5/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/cdn/15/js/app.js"></script>
+  <script src="/cdn/15/js/storage.js"></script>
 
   <script>
     const apiKey = '{{ apiKey }}'; // Replace with your OpenAI API key
@@ -320,6 +289,7 @@
     function hideLoginModal() {
       const modal = document.getElementById('loginModal');
       if (getCookie('access_token')) {
+        loadChatHistoryFromStorage();
         modal.classList.remove('force-show');
       }
     }
